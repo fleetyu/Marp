@@ -1,10 +1,11 @@
-/* @theme einstein */
+/* @theme arendt */
 
 /*
   ============================================
     Created by Paulo Cunha
     version: 1.0
-    last update: 01.jul.2023
+    last update: 24.jul.2023
+    last update: 24.jul.2023
   ============================================       
 */
 
@@ -16,7 +17,9 @@
 
 /* Importing Font */
 /* Font Credit: htts://https://www.cdnfonts.com/ */
-@import url('https://fonts.cdnfonts.com/css/fira-sans-condensed?styles=19730');
+/* @import url('https://fonts.cdnfonts.com/css/fira-sans-condensed?styles=19730'); */
+/* @import url('https://fonts.cdnfonts.com/css/fira-sans?styles=20119'); */
+/* @import url('https://fonts.cdnfonts.com/css/fira-sans?styles=20121'); */
 @import url('https://fonts.cdnfonts.com/css/fira-sans');
 
 @font-face {
@@ -29,46 +32,42 @@
   src: url("https://fonts.cdnfonts.com/css/fira-sans?styles=20119");
 }
 
-
-
 /* -------------------- ROOT -------------------------------*/
 
 :root {
 
+  font-family: BodyFont, sans-serif;
   font-family: 'Fira Sans', sans-serif;
   font-weight: initial;
 
-  --default-strong-font-color: rgb(216, 183, 77);
+  /* --default-background-color: #d6d2c6;  */
+  --default-background-color: #e4d5a6;
+  --default-font-color: rgb(68, 19, 16);
 
-  --cool-list-color: rgb(107, 130, 173);
+  --default-list-font-color: #e0ac00;
+  --cool-list-color: rgb(255, 31, 1);
 
-  --bold-color: rgb(125, 153, 211);
+  --bold-color: rgb(0, 85, 255);
 
-  --italic-background-color: rgb(219, 208, 54);
+  --default-header-font-color: rgb(22, 22, 22);
+  --subtitle-color: rgb(12, 55, 75);
+  --letter-spacing: -0.6px !important;
+  --default-header-bold-font-color: rgb(228, 5, 5);
+  --default-strong-font-color: rgb(201, 59, 34);
+  --italic-background-color: orangered;
+  --default-border-color: 2px solid rgb(211, 34, 11);
 
-  /* --default-background-color: rgb(39, 42, 53); */
-  --default-background-color: rgba(131, 133, 139, 0.24);
-  --default-background-color: rgb(62, 63, 70);
-  --default-background-color: #3e3f42;
 
-  --default-font-color: #edf2f5;
-
-  --default-header-font-color: rgb(136, 141, 141);
-  --default-header-font-color: rgb(130, 162, 179);
-  --default-header-font-color: #6183A8;
-  --default-header-font-color: #8bb1c5;
-
-  --default-header-bold-font-color: rgb(250, 118, 70);
-
-  --default-border-color: 1px solid rgb(253, 101, 0);
 
   background-color: var(--default-background-color);
   color: var(--default-font-color);
+
 }
 
 :root p {
-  font-size: 32px;
-  font-family: "BodyFont", sans-serif;
+
+  font-size: 36px;
+  font-family: "BodyFont", sans-serif !important;
   letter-spacing: -0.5px;
 
   color: var(--default-font-color);
@@ -76,11 +75,12 @@
 
 :root ul,
 ol {
-  font-size: 27px;
-  font-family: BodyFont, sans-serif;
-  letter-spacing: -0.3px;
 
-  color: var(--default-font-color);
+  font-size: 30px;
+  font-family: "BodyFont", sans-serif !important;
+  letter-spacing: -0.2px;
+  font-weight: 600 !important;
+
 }
 
 :root h1,
@@ -100,9 +100,9 @@ h6 {
 /* -------------------- PRE -------------------------------*/
 
 :root pre {
-  color: rgb(33, 34, 34);
-  font-weight:800 ;
-  background-color: #c5c8cc;
+  color: rgb(3, 3, 3);
+  font-weight: 800;
+  background-color: #ffffffa1;
 }
 
 /* -------------------- STRONG -----------------------------*/
@@ -118,6 +118,7 @@ section strong {
   padding-right: 2px;
   font-weight: 600;
 }
+
 /* -------------------- TABLE -----------------------------*/
 
 section table {
@@ -131,8 +132,16 @@ section table th {
 /* -------------------- CITE -----------------------------*/
 
 section.cite {
-  background-color: #d8dee9;
+
+  background-color: #cedbf3;
+  background-color: rgb(216, 222, 233);
   --strong-color: #4d75a5;
+}
+
+section.cite p {
+
+  font-family: Cambria, Georgia, Times, 'Times New Roman', serif !important;
+
 }
 
 /* -------------------- TITLEPAGE --------------------------*/
@@ -140,7 +149,7 @@ section.cite {
 section.titlepage {
   color: var(--default-font-color);
   background-color: var(--default-background-color);
-  --subtitle-font-weight  : 300;
+  --subtitle-font-weight: 300;
 
 }
 
@@ -150,7 +159,7 @@ section.titlepage .title {
 }
 
 section.titlepage h1 {
-  border-bottom: var(--default-border-color);
+  border-bottom: var(--default-border-color) !important;
   color: var(--default-font-color);
 }
 
@@ -217,5 +226,4 @@ li {
   font-weight: 100;
 }
 
-section.columns li {
-}
+section.columns li {}

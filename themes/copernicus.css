@@ -1,123 +1,182 @@
 /* @theme copernicus */
 
-@import "marpx";
+/*
+  ============================================
+    Created by Paulo Cunha
+    version: 1.0
+    last update: 30.ago.2024
+    Name change
+  ============================================       
+*/
 
+/* Importing COLOR SCHEMA */
+
+@import "default";
+@import "schema";
+@import "structure";
+
+/* 
+--------------------------------------------------------------
+    Font Importing (download)
+    Font Credit: htts://https://www.cdnfonts.com/
+-------------------------------------------------------------- 
+*/
+
+@import url('https://fonts.cdnfonts.com/css/fira-sans?styles=20123,20126,20116,20119,20121,20124,20112,20114,20110');
+@import url('https://fonts.cdnfonts.com/css/fira-sans-condensed?styles=19730,19733,19723,19726,19728,19731,19719,19721,19717');
+
+/***************** COMMON STRUCTURE **********************/
 
 :root {
-  /*------------ Overall theme parameters ---------------------------------*/
 
-  --marpx-theme-brandlogo:                 " ";
-  --marpx-theme-chapter-background-color: #fac01f;
-  --marpx-theme-chapter-h1-font-color:    #021d24;
-  --marpx-theme-chapter-h2-font-color:    #021d24;
-  --marpx-theme-color:                    #360200;
-  --marpx-theme-figure-captiontext:       "Fig. ";
-  --marpx-theme-figure-captiontext-color: #455b8a;
-  --marpx-theme-font-family:              "Fira Sans", Faustina, Bookerly, sans-serif;
-  --marpx-theme-marker-color:             #f16762;
-  --marpx-theme-table-captiontext:        "Table ";
-  --marpx-theme-chapter-h2-font-color:    #19441b;
-  --marpx-theme-h1-color:	                #3d4e9c;
-  --marpx-theme-h2-color:	                #465070;
+    font-family: 'Fira Sans Light';
+    font-weight: initial;
+    font-kerning: auto !important;
+    background-color: #bbc7e7; 
+    --cool-list-color: #7790c7;
+}
 
 
-  /* --marpx-theme-toc-color: #5b688b; */
-  --marpx-theme-background-color:       #bbc7e7;
-  --marpx-theme-bold-color:             #6462f1;
-  --marpx-theme-bold-color:             #1a3952;
-  --marpx-theme-code-color:             rgb(233, 233, 233);
-  --marpx-theme-font-color:             #444a55;
-  --marpx-theme-footnote-mark-color:    #ff0000;
-  --marpx-theme-h1-bold-color:          #e96363;
-  --marpx-theme-highlight-color:        #b9e4f1;
-  --marpx-theme-subtitle-color:         #5d616d;
+section h1 {
 
-  /* ------------------- TITLE SLIDE -----------------------------*/
+    font-family: 'Fira Sans';
+    font-weight: 500;
+    color: #011963;
+    letter-spacing: -1.25px;
+    border-bottom: 1px solid rgb(87, 117, 145) !important;
 
-  /* fonts sizes */
-  --marpx-title_academic-author-size:     110%;
-  --marpx-title_academic-date-size:       95%;
-  --marpx-title_academic-institute-size:  85%;
-  --marpx-title_academic-subtitle-size:   95%;
-  --marpx-title_academic-title-size:      145%;
-
-  /* inter character space */
-  --marpx-title_academic-letter-spacing: 0.075px;
-
-  /* font weights */
-  --marpx-title_academic-subtitle-font-weight: 400;
-  --marpx-title_academic-title-font-weight: bold;
-
-  /* colors in style */
-  --marpx-title_academic-title-color:     #002b36;
-  --marpx-title_academic-subtitle-color:  #dcdee0;
-  --marpx-title_academic-author-color:    #002b36;
-  --marpx-title_academic-font-color:      #242d31;
-  --marpx-title_academic-background-color:#7790c7;
-  --marpx-title_academic-border-color:    #aacce2;
-
-  /*------------ Parameters used in `REFERENCES` ---------------------------------*/
-
-  --marpx-references-bold-color: #3e6ceb;
-  --marpx-references-background-color: #eff4fa;
-  --marpx-references-header-color: #539dd3;
-
-  /*------------ Parameters used in `QUOTE` ---------------------------------*/
-
-  --marpx-quote-font-family: Bookerly, Faustina, Times, serif;
-
-  --marpx-quote-background-color: #f3f3f2;
-  --marpx-quote-paragraph-background-color: #f3f3f2;
-  --marpx-quote-bold-color: #6462f1;
-
-  /*- quote dark -*/
-
-  --marpx-quote_dark-font: Bookerly, Faustina, Bookerly, Times, serif;
-
-  --marpx-quote_dark-font-color: #c4bcbc;
-  --marpx-quote_dark-color-background: #222020;
-  --marpx-quote_dark-color-paragraph-background: #222020;
-  --marpx-quote_dark-bold-color: #ffffff;
-
-  /*------------ Parameters used in `TABLE` ---------------------------------*/
-
-  --marpx-table-header-background-color: #000000;
-  --marpx-table-header-color-color: white;
-  /* --marpx-table-border-top-color: ; */
-  --marpx-table-border-bottom-color: #cac9c5f8;
-  --marpx-table-nth-child-color-color: #f5f5f5;
-  --marpx-table-hover-color: #474619;
-  --marpx-table-hover-background-color: #eaf779;
-
-  --marpx-table-font-size: 22px;
-  --marpx-table-font-family: ;
-  
-  /*------------ Parameters used in `TOC` ---------------------------------*/
-  --marpx-color-toc-marker: rgb(50, 14, 253);
 
 }
 
-section {
-  line-height: 1.153em;
-  letter-spacing: -1.1px;
+section h2 {
+
+    font-family: 'Fira Sans';
+    font-weight: 500;
+    color: rgb(87, 115, 152);
+    color: rgb(199, 13, 0);
+
+
 }
 
-.box {
-  border: 2px solid #222;
-  border-radius: 6px; /* opcional: cantos arredondados */
-  padding: 2px 8px; /* espaço interno */
-  /* background: #fffbe7;   /* opcional: cor de fundo */
-  display: inline-block; /* garante o retângulo ao redor da palavra */
+section h3 {
+
+    font-family: 'Fira Sans';
+    font-weight: 400;
+    font-size: 130%;
+    /* color: rgb(87, 115, 152); */
+    letter-spacing: -1.25px;
+
+
 }
 
-section code:not(pre code) {
+section p {
 
-  background: #7790c759 !important;
-  border-radius: 6px !important;
-  border: 0x solid #222;
-  color: #1a3952;
-  display: inline-block;
-  font-size: 1em;
-  font-weight: 600 !important;
-  padding: 1px 8px;
+    font-family: 'Fira Sans Condensed';
+    font-weight: 400 !important;
+    color: rgb(46, 54, 76);
+    /* letter-spacing: 0.01pt; */
+
+}
+
+section em {
+    font-family: 'Fira Sans';
+    font-weight:500;
+    font-style: normal;
+    font-size: 105%;
+    letter-spacing: -0.8pt;
+
+    background-color: rgb(213, 224, 233);
+    background-color: rgba(7, 216, 253, 0.671);
+    background-color: rgba(238, 255, 0, 0.671);
+    background-color: rgba(148, 181, 252, 0.76);
+    background-color: #7790c759;
+    color:rgb(168, 70, 73);
+    color: rgb(241, 241, 245);
+    color: #1a3952;
+}
+
+section strong {
+    color:rgb(219, 92, 96) !important;
+    font-weight: 500 !important;
+}
+
+section figcaption{
+  color:black;
+}
+
+section.titlepage {
+/* 
+    background-color: rgb(211, 209, 209);
+    background-color: rgb(184, 184, 184); 
+    background-color: rgb(132, 151, 176);
+*/
+    background-color: #7790c7;
+    color: rgb(196, 218, 252) !important;
+
+}
+
+section li{
+    font-size: 25pt;
+    color: rgb(53, 59, 70);
+    
+}
+
+section.titlepage h1,
+.title {
+
+    font-family: 'Fira Sans';
+    font-weight: 600;
+    color: rgb(1, 1, 1);
+    border-bottom: 1px solid rgb(243, 243, 223) !important;
+}
+
+section.titlepage h2,
+.subtitle {
+
+    color: #dcdee0 !important;
+}
+
+
+section.titlepage .author,
+.date,
+.organization {
+    text-align: left !important;
+    font-weight: 500 !important;
+}
+
+section.titlepage h3,
+h4,
+h5,
+.author,
+.date,
+.organization {
+    font-family: 'Fira Sans Condensed' ;
+    font-weight: 400 !important;
+}
+
+
+section strong {
+    color: rgb(255, 208, 0);
+    color: rgb(74, 5, 250);
+    font-weight: 500;
+}
+
+section.transition {
+    font-size: 22pt;
+
+}
+
+section.transition em {
+
+    /* text-shadow: 6px 6px 0 rgb(207, 143, 4);*/
+
+}
+
+section.transition strong {
+
+    /* text-shadow: 6px 6px 0 rgb(207, 143, 4);*/
+    color: rgb(255, 166, 1);
+    font-size: 90% !important;
+    font-style: italic;
+
 }

@@ -1,6 +1,6 @@
-/*! @theme gropius */
+/*  @theme orwell */
 
-/*
+/*!-- 
   ============================================
     Created by Paulo Cunha
     version: 1.0
@@ -8,100 +8,76 @@
   ============================================       
 */
 
-/*! Importing COLOR SCHEMA */
+/*!--  Importing COLOR SCHEMA */
 
 @import "default";
 @import "schema";
 @import "structure";
 
-/*-----------------------------------------------*/
-/*! Importing Font                                */
-/*! Font Credit: htts://https://www.cdnfonts.com/ */
-/*-----------------------------------------------*/
-/* @import url('https://fonts.cdnfonts.com/css/libre-bodoni-2'); */
-/* @import url('https://fonts.cdnfonts.com/css/joan-2'); */
-/* @import url('https://fonts.cdnfonts.com/css/fira-sans-condensed?styles=19730'); */
-/* @import url('https://fonts.cdnfonts.com/css/montserrat'); */
-/* @import url('https://fonts.cdnfonts.com/css/futura-std-4'); */
-/* @import url('https://fonts.cdnfonts.com/css/open-sans'); */
-/* @import url('https://fonts.cdnfonts.com/css/noto-serif-thai'); */
+/*!-- -----------------------------------------------*/
+/*!--  Importing Font                                */
+/*!--  Font Credit: htts://https://www.cdnfonts.com/ */
+/*!-- -----------------------------------------------*/
+/*!--  @import url('https://fonts.cdnfonts.com/css/libre-bodoni-2'); */
 @import url('https://fonts.cdnfonts.com/css/faustina-2');
-@import url('https://fonts.cdnfonts.com/css/droid-sans-2');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*!--  @import url('https://fonts.cdnfonts.com/css/joan-2'); */
+@import url('https://fonts.cdnfonts.com/css/fira-sans-condensed?styles=19730');
+@import url('https://fonts.cdnfonts.com/css/noto-serif-thai');
 
-
-/*! -------------------- ROOT -------------------------------*/
+/*!--  -------------------- ROOT -------------------------------*/
 
 :root {
 
-  /*! Default items */
-  /* --default-font-family: 'Futura Std', 'Faustina', 'Berlin Type Office', 'Calisto MT', 'Bookerly', 'Noto Serif Thai', sans-serif; */
-  /* --default-font-family: 'Faustina', sans-serif; */
-  --default-font-family: 'Inria Sans', 'Bookerly', 'Noto Serif Thai', sans-serif;
+  /*!--  DEFAULT ITEMS */
+  /*!--  --DEFAULT-FONT-FAMILY: 'BOOKERLY', 'NOTO SERIF THAI', 'JOAN', 'FAUSTINA', 'LIBRE BODONI', SANS-SERIF; */
+  --default-font-family: 'Noto Serif Thai', sans-serif;
+  --default-font-family: 'Bookerly', 'Noto Serif Thai', sans-serif;
   --default-font-weight: initial;
   --default-font-size: 22pt !important;
-  --default-font-color: rgb(48, 49, 85);
-  --default-letter-spacing: -0.8px;
-  /* 
-  --default-background-color: #A4C2F4; 
-  --default-background-color: #C9DAF8; 
-  --default-background-color: #ffb600; 
-  */
-  --default-background-color: #b8c2f9; 
+  --default-font-color: #303155;
+  --default-letter-spacing: -0.4px;
+  --default-background-color: #fdf8ed;
+  --default-background-color: rgb(216, 222, 233);
   
-  /*! Paragraph */
+  /*!-- !--  PARAGRAPH */
   --p-color: rgba(4, 20, 41, 0.814);
   --p-font-size: 112%;
   --p-font-weight: 500;
   --p-line-height: 112%;
 
-  /*!  Title Page Title*/
-  --titlepage-title-font-family: 'Arial';
-  --titlepage-title-font-family: 'Futura Std';
-  --titlepage-title-font-family: 'Droid Sans';
-  --titlepage-title-font-size: 34pt;
-  --titlepage-title-font-weight: 700;
-  --titlepage-title-padding-bottom: 0pt;
-  
-  /*!  Title Page Subtitle*/
-  /*! --titlepage-subtitle-font-family: 'Fira Sans Condensed'; */
-  --titlepage-subtitle-font-family: 'Open Sans Light';
-  --titlepage-subtitle-font-size: 26pt;
-  --titlepage-subtitle-font-weight: 700;
-  --titlepage-subtitle-font-color: rgb(7, 7, 224);
-  
-  
-  /*! Strong */
+  /*!--   TITLE PAGE */
+  --titlepage-title-font-family: inherit;
+  --titlepage-subtitle-font-family: 'Fira Sans Condensed';
+  --titlepage-title-font-size: 32pt;
+  --titlepage-title-padding-bottom: 6pt;
+
+  /*!--  STRONG */
   --strong-padding-left: 2px;
   --strong-padding-right: 2px;
   --strong-font-weight: 600;
   
-  /*! Bold  */
+  /*!--  BOLD  */
   --bold-color: rgb(255, 8, 0);
-  --bold-color: rgb(2, 96, 236);
+  --bold-color: #e70000;
 
-  /*! Italic */
-  --italic-color: rgb(17, 16, 16);
-  --italic-background-color: rgb(238, 234, 9);
+  /*!--  ITALIC */
+  --italic-color: #ffffff;
+  --italic-background-color: #ee0909;
 
-  /*! Cool-List */
+  /*!--  COOL-LIST */
   --cool-list-color: rgb(233, 26, 11);
 
-  /*! H1 */
-  /* --h1-color: rgb(9, 38, 80); */
-  --h1-color: rgb(255, 255, 255);
-  --h1-font-family: 'Montserrat';
+  /*!--  H1 */
+  --h1-color: #32446b;
+  --h1-font-family: 'Fira Sans condensed';
   --h1-font-size: 36pt;
-  --h1-font-weight: 600;
-  --h1-letter-spacing: -1.76px;
-  --h1-text-shadow: -10px 2px 45px #0c3157b4;
-
+  --h1-font-weight: 900;
   --h1-padding-bottom: 2mm;
   --h1-margin-bottom: 10mm;
-  /* --h1-border-bottom: 1px solid orangered; */
+  --h1-border-bottom: 1px solid orangered;
 
-  /*! Code */
-  --code-background-color: rgba(206, 252, 0, 0.726);
+  /*!--  CODE */
+  --code-background-color: rgba(206, 252, 0, 0.493);
   --code-font-family: inherit;
   --code-font-color: rgb(10, 10, 10);
   --code-font-size: inherit;
@@ -110,22 +86,26 @@
   --code-padding-right: 16px;
   --code-border-radius: 13pt;
 
-    /*! List Item <li> */
+  /*!--  LIST ITEM <LI> */
   --li-font-size: 22pt;
   --li-hover-font-color: rgb(255, 255, 255);
   --li-hover-background-color: rgba(10, 10, 10, 0.089);
 
   
-  /*! Transition  */
-  --transition-background-color: rgb(115, 137, 196);
-  --transition-em-background-color: rgba(38, 75, 151, 0.773);
+  /*!--  TRANSITION  */
+  --transition-background-color: #7389c4;
+  --transition-em-background-color: #264b97c5;
   
-  /*! Transition2  */
-  --transition2-background-color: #ffa700;
+  /*!--  TRANSITION2  */
   --transition2-em-background-color: #d63d00e3;
+  --transition2-background-color: #ee7614;
+  /*!--  --transition2-em-background-color: #a3343494;
+  --transition2-background-color: #df8379; */
 
-  /*! Cite  */
-  --cite-background-color: rgb(154, 173, 226);
+  /*!--  CITE */
+  --cite-background-color: #8aa1e2;
+  --cite-background-color: #9aade2;
+  
 }
 
 :root {
@@ -140,56 +120,32 @@
 
 }
 
-/*! ----------------------- TITLE PAGE -------------------------------*/
+/*!--  ----------------------- TITLE PAGE -------------------------------*/
 
 section.titlepage .title {
-  
   font-family: var(--titlepage-title-font-family);
   font-size: var(--titlepage-title-font-size);
-  font-weight: var(--titlepage-title-font-weight) !important;
-
   border-bottom: var(--h1-border-bottom);
   padding-bottom: var(--titlepage-title-padding-bottom);
 
 }
 
-section.titlepage .subtitle{
-
+section.titlepage .subtitle {
   font-family: var(--titlepage-subtitle-font-family);
-  font-size: var(--titlepage-subtitle-font-size);
-  font-weight: var(--titlepage-subtitle-font-weight);
 
-  color: var(--titlepage-subtitle-font-color);
-  line-height: 25pt !important;
-  
 }
 
 section.titlepage h1 {
-
   font-family: var(--titlepage-title-font-family) !important;
   font-size: var(--titlepage-title-font-size) !important;
   padding-bottom: var(--titlepage-title-padding-bottom) !important;
 
-  font-family: var(--titlepage-title-font-family);
-  font-size: var(--titlepage-title-font-size);
-  font-weight: var(--titlepage-title-font-weight) !important;
-
-  border-bottom: var(--h1-border-bottom);
-  padding-bottom: var(--titlepage-title-padding-bottom);
-
 }
 
 section.titlepage h2 {
-
   line-height: 0pt !important;
   font-family: var(--titlepage-subtitle-font-family);
   padding-bottom: 150pt !important;
-  
-  font-family: var(--titlepage-subtitle-font-family);
-  font-size: var(--titlepage-subtitle-font-size);
-  font-weight: var(--titlepage-subtitle-font-weight);
-
-  color: var(--titlepage-subtitle-font-color) !important;
 
 }
 
@@ -199,7 +155,7 @@ section.titlepage .organization {
   text-align: left;
 }
 
-/*! -------------------- H1 -------------------------------*/
+/*!--  -------------------- H1 -------------------------------*/
 
 h1 {
 
@@ -211,11 +167,10 @@ h1 {
   padding-bottom: var(--h1-padding-bottom);
   margin-bottom: var(--h1-margin-bottom);
   border-bottom: var(--h1-border-bottom);
-  letter-spacing: var(--h1-letter-spacing);
-  text-shadow: var(--h1-text-shadow);
+
 }
 
-/*! ------------------- PARAGRAPH ------------------------*/
+/*!--  ------------------- PARAGRAPH ------------------------*/
 
 p {
   font-size: var(--p-font-size);
@@ -224,14 +179,7 @@ p {
   line-height: var(--p-line-height) !important;
 }
 
-/*! ------------------- ANCHOR ------------------------*/
-
-a {
-  color: #1e3f7c;
-  font-size: 95%;
-}
-
-/*! ----------------- LIST ITEM ------------------------*/
+/*!--  ----------------- LIST ITEM ------------------------*/
 
 li {
   font-size: var(--li-font-size) !important;
@@ -243,7 +191,7 @@ li:hover {
 }
 
 
-/*! --------------------- STRONG -------------------------*/
+/*!--  --------------------- STRONG -------------------------*/
 
 strong {
   color: var(--bold-color) !important;
@@ -252,7 +200,7 @@ strong {
   font-weight: var(--strong-font-weight);
 }
 
-/*! ----------------------- CODE -------------------------------*/
+/*!--  ----------------------- CODE -------------------------------*/
 
 section code {
 
@@ -273,7 +221,7 @@ section code {
 }
 
 
-/*! -------------------- TRANSITION -------------------------------*/
+/*!--  -------------------- TRANSITION -------------------------------*/
 
 section.transition {
   background-color: var(--transition-background-color) !important;
@@ -305,7 +253,7 @@ section.transition strong {
 }
 
 
-/*! -------------------- TRANSITION2 -------------------------------*/
+/*!--  -------------------- TRANSITION2 -------------------------------*/
 
 section.transition2 {
   background-color: var(--transition2-background-color) !important;
@@ -338,19 +286,19 @@ section.transition2  em {
 
 }
 
-/*! -------------------- BIBLIO -------------------------------*/
+/*!--  -------------------- BIBLIO -------------------------------*/
 
 section.biblio {
 
   font-family: var(--default-font-family) !important;
-  --border-color: rgb(66, 75, 82);
-  --biblio-background-color: rgb(184, 194, 249);
+  --border-color: #424b52;
+  --biblio-background-color: #e3f5ff;
 
-  --text-color: rgb(0, 0, 0);
-  --bold-color: rgb(71, 96, 255);
+  --text-color: #000000;
+  --bold-color: #4760ff;
 }
 
-/*! -------------------- COLUMNS -------------------------------*/
+/*!--  -------------------- COLUMNS -------------------------------*/
 
 section.columns ul,
 section.columns ol,
@@ -361,11 +309,12 @@ section.columns li {
   font-weight: 400;
 }
 
-/*! ----------------------- CITE -------------------------------*/
+/*!--  ----------------------- CITE -------------------------------*/
 
 section.cite {
 
-  background-color: var(--cite-background-color) !important;
+  background-color: var(--cite-background-color);
+  
 }
 
 section.cite p{

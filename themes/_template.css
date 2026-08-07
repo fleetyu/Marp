@@ -1,173 +1,326 @@
-/* @theme hobbes */
+/* @theme orwell */
 
-@import "marpx";
+/*
+  ============================================
+    Created by Paulo Cunha
+    version: 1.0
+    last update: 28.mar.2024
+  ============================================       
+*/
 
-/* Font: Bitter */
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Importing COLOR SCHEMA */
+
+@import "default";
+@import "schema";
+@import "structure";
+
+/*-----------------------------------------------*/
+/* Importing Font                                */
+/* Font Credit: htts://https://www.cdnfonts.com/ */
+/*-----------------------------------------------*/
+/* @import url('https://fonts.cdnfonts.com/css/libre-bodoni-2'); */
+@import url('https://fonts.cdnfonts.com/css/faustina-2');
+/* @import url('https://fonts.cdnfonts.com/css/joan-2'); */
+@import url('https://fonts.cdnfonts.com/css/fira-sans-condensed?styles=19730');
+@import url('https://fonts.cdnfonts.com/css/noto-serif-thai');
+
+/* -------------------- ROOT -------------------------------*/
 
 :root {
 
-  --color-background1: #dcded3;
-  --color-background2: #131920;
-  --color-bold: #041a2c;
-  --color-font-h1: #242060;
-  --color-font: #2e2e2e;
-  --color-marker: #f0a211;
-
-  /* Khaki */
-  --khaki-d100: #fef7e0;
-  --khaki-d200: #fad762;
-  --khaki-d300: #fdca24;
-  --khaki-d400: #ffab10;
-  --khaki-d500: #e9e3d1;
-  --khaki-d600: #b8b8b8;
-  --khaki-d700: #bbb7a9;
-  --khaki-d800: #a2a0a0;
-  --khaki-d900: #3c3f3b;
-  --khaki-d1000: #706d63;
-  --khaki-d1100: #2e2626;
-  --khaki-d1200: #d1002a;
-
-  /* Blue */
-  --blue-d100: #bee5ff;
-  --blue-d200: #5d9cfa;
-  --blue-d300: #93b0ee;
-  --blue-d400: #6e85b8;
-  --blue-d500: #6880a0;
-  --blue-d600: #5871a7;
-  --blue-d700: #023977;
-  --blue-d800: #253d72;
-  --blue-d900: #111622;
-
-  /* Green */
-  --green-d100: #eeff00;
-
-
-
-  /* MAIN GLOBAL PARAMETERS of THEME */
-  --marpx-theme-font-size: 24pt; /* paulo.cunha */
-  --marpx-theme-letter-spacing: .01px;
-  --marpx-theme-font-family: Bitter, Faustina, Bookerly, Lora, serif;
-  --marpx-theme-background-color: var(--color-background1);
-  --marpx-theme-font-color: var(--color-font);
-  --marpx-theme-bold-color: var(--color-bold);
-  --marpx-theme-marker-color: var(--color-marker);
-  --marpx-theme-h1-font-size: 34pt;
-  --marpx-theme-h1-color: var(--color-font-h1);
-  --marpx-theme-h1-bold-color: var(--khaki-d800);
-  --marpx-theme-h2-color: var(--blue-d500);
-
-  /* SECONDARY GLOBAL PARAMETERS of THEME */
-  --marpx-theme-color: var(--color-font);
-  --marpx-theme-figure-captiontext-color: var(--khaki-d1200);
-  --marpx-theme-figure-captiontext: "Fig. ";
-  --marpx-theme-highlight-color: var(--blueViolet-500);
-  --marpx-theme-table-captiontext: "Table. ";
-  --marpx-theme-table-captiontext-color: var(--khaki-d1200);
-  --marpx-theme-toc-color: var(--blue-d500);
-
-
-
-  /*-------------------< CHAPTER SLIDE >-----------------------------*/
-
-  --marpx-theme-chapter-background-color: hsl(224, 65%, 75%);
-  --marpx-theme-chapter-h1-font-color: #ffffff;
-  --marpx-theme-chapter-h2-font-color: #ffffff;
-  --marpx-theme-chapter-font-family: "Fira Sans", Faustina, Bookerly, sans-serif;
-  --marpx-theme-chapter-bar-color: #ffffff;
-
-  /* TITLE ACADEMIC */
-  --marpx-title_academic-title-size: 125%;
-  --marpx-title_academic-subtitle-size: 85%;
-  --marpx-title_academic-author-size: 100%;
-  --marpx-title_academic-institute-size: 85%;
-  --marpx-title_academic-title-font-weight: bold;
-  --marpx-title_academic-letter-spacing: -0.07px;
-
-  --marpx-title-header-color: var(--color-marker);
-  --marpx-title_academic-background-color: var(--color-background2);
-  --marpx-title_academic-title-color: var(--color-background1);
-  --marpx-title_academic-subtitle-color: var(--khaki-d700);
-  --marpx-title_academic-border-color: var(--blue-d300);
-  --marpx-title_academic-author-color: var(--color-marker);
-  --marpx-title_academic-font-color: var(--khaki-d700);
-
-  /*  QUOTE */
-  --marpx-quote-font-color: var(--color-font);
-  --marpx-quote-background-color: var(--khaki-d500);
-  --marpx-quote-bold-color: var(--khaki-d1200);
-  --marpx-quote-paragraph-background-color: inherit;
-  --marpx-quote_dark-font-color: var(--color-background1);
-  --marpx-quote_dark-bold-color: var(--khaki-d400);
-  --marpx-quote_dark-color-background: var(--khaki-d900);
-  --marpx-quote_dark-color-paragraph-background: inherit;
-
-  /* REFERENCES */
-  --marpx-references-background-color: var(--color-background1);
-  --marpx-references-header-color: var(--blue-d500);
-  --marpx-references-bold-color: var(--color-font-h1);
-  --marpx-references-color: var(--color-font);
-  --marpx-references-font-family: inherit;
-
-  /* TABLE */
-  --marpx-table-font-color: var(--color-font);
-  --marpx-table-hover-background-color: var(--violet-100);
-  --marpx-table-hover-color: var(--blueViolet-400);
-
-
-
-}
-
-/* Demais diferenças estruturais */
-section {
-  line-height: 1.2em;
-}
-
-section code:not(pre code) {
-  color: var(--color-font);
-  background: var(--khaki-d300) !important;
-  border: 0px solid var(--color-font);
-  border-radius: 8px;
-  padding: 1px 5px;
-  font-size: 0.98em;
-  display: inline-block;
-}
-
-
-section.slide.white,
-section.white-slide {
-  color: var(--color-font);
-}
-
-section.references a {
-  color: var(--blue-d700);
-  font-weight: 100;
-  text-decoration: underline;
-
-}
-
-section.chapter {
-  background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
-  background-repeat: no-repeat; /* Evita repetição da imagem */
-  background-position: center; /* Centraliza a imagem no fundo */
-  background-color: rgb(0, 25, 46);
-  filter: grayscale(0.3) brightness(0.9);
-  background-image: linear-gradient(to right bottom, #4e6699, #010c24);
-  /* background-image: url("./pattern01.jpg"); */
-}
-
-
-section.quote {
+  /* Default items */
+  /* --default-font-family: 'Bookerly', 'Noto Serif Thai', 'Joan', 'Faustina', 'Libre Bodoni', sans-serif; */
+  --default-font-family: 'Bookerly', 'Noto Serif Thai', sans-serif;
+  --default-font-weight: initial;
+  --default-font-size: 22pt !important;
+  --default-font-color: #303155;
+  --default-letter-spacing: -0.4px;
+  --default-background-color: #fdf8ed ;
   
-  --marpx-quote-font-color: var(--blue-d100);
-  --marpx-quote-background-color: var(--blue-d200);
-  --marpx-quote-bold-color: var(--green-d100);
-  background-image: radial-gradient(#141414 0%, transparent 0%, var(--blue-d700) 83%);
+  /* Paragraph */
+  --p-color: rgba(4, 20, 41, 0.814);
+  --p-font-size: 112%;
+  --p-font-weight: 500;
+  --p-line-height: 112%;
+
+  /*  Title Page */
+  --titlepage-title-font-family: inherit;
+  --titlepage-subtitle-font-family: 'Fira Sans Condensed';
+  --titlepage-title-font-size: 32pt;
+  --titlepage-title-padding-bottom: 6pt;
+
+  /* Strong */
+  --strong-padding-left: 2px;
+  --strong-padding-right: 2px;
+  --strong-font-weight: 600;
+  
+  /* Bold  */
+  --bold-color: rgb(255, 8x, 0);
+  --bold-color: #e70000;
+
+  /* Italic */
+  --italic-color: #ffffff;
+  --italic-background-color: #ee0909;
+
+  /* Cool-List */
+  --cool-list-color: rgb(233, 26, 11);
+
+  /* H1 */
+  --h1-color: #32446b;
+  --h1-font-family: 'Fira Sans condensed';
+  --h1-font-size: 36pt;
+  --h1-font-weight: 900;
+  --h1-padding-bottom: 2mm;
+  --h1-margin-bottom: 10mm;
+  --h1-border-bottom: 1px solid orangered;
+
+  /* Code */
+  --code-background-color: rgba(206, 252, 0, 0.877);
+  --code-font-family: inherit;
+  --code-font-color: rgb(10, 10, 10);
+  --code-font-size: inherit;
+  --code-font-weight: 600;
+  --code-padding-left: 16px;
+  --code-padding-right: 16px;
+  --code-border-radius: 13pt;
+
+    /* List Item <li> */
+  --li-font-size: 22pt;
+  --li-hover-font-color: rgb(255, 255, 255);
+  --li-hover-background-color: rgba(10, 10, 10, 0.089);
+
+  
+  /* Transition  */
+  --transition-em-background-color: #264b97c5;
+  --transition-background-color: #7389c4;
+  
+  /* Transition2  */
+  --transition2-em-background-color: #d63d00e3;
+  --transition2-background-color: #ee7614;
+  /* --transition2-em-background-color: #a3343494;
+  --transition2-background-color: #df8379; */
+
 }
 
-section.quote.dark {
+:root {
 
-  --marpx-quote_dark-font-color: white;
-  background-image: linear-gradient(to top, var(--blue-d600), var(--blue-d900));
-  /* background-image: url("./pattern01.jpg"); */
+  font-family: var(--default-font-family);
+  font-weight: var(--default-font-weight);
+  font-size: var(--default-font-size);
+  background-color: var(--default-background-color);
+  color: var(--default-font-color);
+  font-kerning: auto !important;
+  letter-spacing: var(--default-letter-spacing);
+
 }
+
+/* ----------------------- TITLE PAGE -------------------------------*/
+
+section.titlepage .title {
+  font-family: var(--titlepage-title-font-family);
+  font-size: var(--titlepage-title-font-size);
+  border-bottom: var(--h1-border-bottom);
+  padding-bottom: var(--titlepage-title-padding-bottom);
+
+}
+
+section.titlepage .subtitle {
+  font-family: var(--titlepage-subtitle-font-family);
+
+}
+
+section.titlepage h1 {
+  font-family: var(--titlepage-title-font-family) !important;
+  font-size: var(--titlepage-title-font-size) !important;
+  padding-bottom: var(--titlepage-title-padding-bottom) !important;
+
+}
+
+section.titlepage h2 {
+  line-height: 0pt !important;
+  font-family: var(--titlepage-subtitle-font-family);
+  padding-bottom: 150pt !important;
+
+}
+
+section.titlepage .author,
+section.titlepage .date,
+section.titlepage .organization {
+  text-align: left;
+}
+
+/* -------------------- H1 -------------------------------*/
+
+h1 {
+
+  font-family: var(--h1-font-family);
+  font-weight: var(--h1-font-weight);
+  font-size: var(--h1-font-size);
+  color: var(--h1-color);
+
+  padding-bottom: var(--h1-padding-bottom);
+  margin-bottom: var(--h1-margin-bottom);
+  border-bottom: var(--h1-border-bottom);
+
+}
+
+/* ------------------- PARAGRAPH ------------------------*/
+
+p {
+  font-size: var(--p-font-size);
+  font-weight: var(--p-font-weight);
+  color: var(--p-color);
+  line-height: var(--p-line-height) !important;
+}
+
+/* ----------------- LIST ITEM ------------------------*/
+
+li {
+  font-size: var(--li-font-size) !important;
+}
+
+li:hover {
+  background-color: var(--li-hover-background-color);
+  color: var(--li-hover-font-color);
+}
+
+
+/* --------------------- STRONG -------------------------*/
+
+strong {
+  color: var(--bold-color) !important;
+  padding-left: var(--strong-padding-left);
+  padding-right: var(--strong-padding-right);
+  font-weight: var(--strong-font-weight);
+}
+
+/* ----------------------- CODE -------------------------------*/
+
+section code {
+
+  font-family: var(--code-font-family);
+  font-size: var(--code-font-size);
+  font-weight: var(--code-font-weight) !important;
+
+  background-color: var(--code-background-color);
+  color: var(--code-font-color) !important;
+
+  padding-left: var(--code-padding-left) !important;
+  padding-right: var(--code-padding-right) !important;
+
+  border-end-start-radius:    var(--code-border-radius);
+  border-start-end-radius:    var(--code-border-radius);
+  border-end-end-radius:      var(--code-border-radius);
+  border-start-start-radius:  var(--code-border-radius);
+}
+
+
+/* -------------------- TRANSITION -------------------------------*/
+
+section.transition {
+  background-color: var(--transition-background-color) !important;
+
+}
+
+section.transition em{
+
+  color: unset !important;
+  background-color: var(--transition-em-background-color);
+  font-family: unset;
+  font-weight: unset;
+  font-style: italic;
+
+  padding-left: var(--code-padding-left) !important;
+  padding-right: var(--code-padding-right) !important;
+
+  border-end-start-radius:    var(--code-border-radius);
+  border-start-end-radius:    var(--code-border-radius);
+  border-end-end-radius:      var(--code-border-radius);
+  border-start-start-radius:  var(--code-border-radius);
+
+}
+
+section.transition strong {
+
+  color: unset !important;
+
+}
+
+
+/* -------------------- TRANSITION2 -------------------------------*/
+
+section.transition2 {
+  background-color: var(--transition2-background-color) !important;
+
+}
+
+section.transition2 strong {
+
+  color: unset !important;
+
+}
+
+section.transition2  em {
+
+  background-color: var(--transition2-em-background-color) !important;
+  
+  color: unset !important;
+  background-color: unset;
+  font-family: unset;
+  font-weight: unset;
+  font-style: italic;
+
+  padding-left: var(--code-padding-left) !important;
+  padding-right: var(--code-padding-right) !important;
+
+  border-end-start-radius:    var(--code-border-radius);
+  border-start-end-radius:    var(--code-border-radius);
+  border-end-end-radius:      var(--code-border-radius);
+  border-start-start-radius:  var(--code-border-radius);
+
+}
+
+/* -------------------- BIBLIO -------------------------------*/
+
+section.biblio {
+
+  font-family: var(--default-font-family) !important;
+  --border-color: #424b52;
+  --biblio-background-color: #b8c2f9;
+
+  --text-color: #000000;
+  --bold-color: #4760ff;
+}
+
+/* -------------------- COLUMNS -------------------------------*/
+
+section.columns ul,
+section.columns ol,
+section.columns li {
+  color: var(--default-font-color);
+  font-family: var(--default-font-family);
+  font-size: 28px !important;
+  font-weight: 400;
+}
+
+/* ----------------------- CITE -------------------------------*/
+
+section.cite {
+
+  background-color: #9aade2;
+}
+
+section.cite p{
+  color: rgb(34, 34, 48) !important;
+  font-family: 'Faustina';
+  font-weight: 600;
+  font-size: 34pt !important;
+
+}
+
+section.cite strong{
+
+  color: rgb(248, 248, 247) !important;
+  
+}
+                                                                                                                                                                                                                                                                                                                                                                                                         

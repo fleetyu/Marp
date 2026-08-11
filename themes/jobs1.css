@@ -6,56 +6,13 @@
 @import "schema";
 @import "structure";
 
-
-/* --------------------- FONTS ------------------------- */
-
-/* Ultra Light */
-@font-face {
-  font-family: "Arial";
-  font-weight: 100;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2");
-}
-
-/* Thin */
-@font-face {
-  font-family: "Arial 200";
-  font-weight: 200;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff2");
-}
-
-/* Regular */
-@font-face {
-  font-family: "Arial 400";
-  font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff2");
-}
-
-/* Bold */
-@font-face {
-  font-family: "Arial bold";
-  font-weight: bold;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2");
-}
-
-/* Bold */
-@font-face {
-  font-family: "Minion Pro";
-  /* font-weight: bold; */
-  src: url("https://fonts.cdnfonts.com/css/minion-pro");
-}
-
-
-
 /***************** COMMON STRUCTURE **********************/
 
 :root {
-  /* font-family: Cochin, Georgia; */
-  /* font-family: 'Times New Roman', Times, serif; */
-  /* font-family: "Fira Sans Light"; */
   
   font-family: 'Arial'; 
   font-family: 'Open Sans';
-  font-family: 'Segoe UI'; 
+  font-family: 'Arial'; 
 
   font-weight: initial;
   
@@ -93,7 +50,7 @@
 
   --extra-back-color          : rgb(71, 69, 69);
 
-  --letter-spacing            : 0.125px;
+  /* --letter-spacing            : 0.125px; */
 
   --cool-list-color           : rgb(135, 157, 179);
 
@@ -104,7 +61,7 @@
 
 :root h1 {
   
-  font-family: 'Arial', sans-serif;
+  font-family: 'Arial';
   
   /* --border-color              : rgb(209, 161, 29); */
   border-bottom: 1px solid rgb(29, 107, 209) !important;
@@ -119,7 +76,7 @@
   margin-left: -60pt;
   margin-right: -60pt;
 
-  letter-spacing: -0.5px;
+  /* letter-spacing: -0.5px; */
 }
 
 
@@ -130,22 +87,22 @@
 
 
 :root h1 {
-  font-family: 'Arial 400';
+  font-family: 'Arial';
 }
 
 
 :root p {
 
   font-size: 34px;
-  font-family: 'Arial 400';
-  letter-spacing: -0.5px;
+  font-family: 'Arial';
+  /* letter-spacing: -0.5px; */
 }
 
 
 :root li {
 
   font-family: 'Arial';
-  letter-spacing: -0.3px;
+  /* letter-spacing: -0.3px; */
 }
 
 
@@ -164,7 +121,7 @@ section.titlepage .title {
 
   /* border-bottom: 1px solid rgb(179, 176, 176); */
   border-bottom: 1px solid rgb(29, 107, 209) !important;
-  letter-spacing: -0.3px;
+  /* letter-spacing: -0.3px; */
 }
 
 
@@ -183,10 +140,10 @@ section.titlepage .organization {
 /* Titlepage made with # */
 section.titlepage h1 {
 
-  font-family: 'Arial 400';
+  font-family: 'Arial';
 
   border-bottom: 1px solid rgb(29, 107, 209) !important;
-  letter-spacing: -0.3px;
+  /* letter-spacing: -0.3px; */
  
   padding-top: 0pt;
   padding-left: 0pt;
@@ -221,7 +178,7 @@ section.transition {
   font-family: 'Segoe UI';   */
 
   font-family: 'Arial bold' !important;
-  font-family: 'Segoe UI' !important; 
+  /* font-family: 'Segoe UI' !important; */
 
   font-size: 200%;
   /* text-shadow: 4px 4px 0 rgb(77, 61, 61); */

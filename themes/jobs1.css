@@ -68,7 +68,7 @@
   
   color: #2b2c2e;
 
-  font-weight: 600;
+  /* font-weight: 600; */
 
   padding-top: 10pt;
   padding-left: 60pt;
@@ -93,7 +93,7 @@
 
 :root p {
 
-  font-size: 34px;
+  /* font-size: 34px; */
   font-family: 'Arial';
   /* letter-spacing: -0.5px; */
 }

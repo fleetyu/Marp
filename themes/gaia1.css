@@ -2,14 +2,13 @@
  * Marp / Marpit Gaia theme (CSS, customized).
  *
  * @theme gaia2
- * @author Yuki Hattori
  *
  * @auto-scaling true
  * @size 16:9 1280px 720px
  * @size 4:3 960px 720px
  */
 
-/*
+ /*
 class fscale=0.85
 style: |
   section {

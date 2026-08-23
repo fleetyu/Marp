@@ -14,8 +14,8 @@
 /* Tunable tokens — edit these first */
 :root {
   --color-bg: #ffffff;
-  --color-light: #ffffff;
-  --color-dark: #303030;
+  --color-light: #fff;
+  --color-dark: #455a64;
   --color-primary: #0288d1;
   --color-secondary: #81d4fa;
 

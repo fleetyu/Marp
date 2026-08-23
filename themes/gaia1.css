@@ -2,6 +2,7 @@
  * Marp / Marpit Gaia theme (CSS, customized).
  *
  * @theme gaia1
+ * @author Yuki Hattori
  *
  * @auto-scaling true
  * @size 16:9 1280px 720px
@@ -12,8 +13,9 @@
 
 /* Tunable tokens — edit these first */
 :root {
-  --color-light: #ffffff;
-  --color-dark: #2f2f2f;
+  --color-bg: #ffffff;
+  --color-light: #fff8e1;
+  --color-dark: #455a64;
   --color-primary: #0288d1;
   --color-secondary: #81d4fa;
 
@@ -213,7 +215,7 @@ footer {
 }
 
 section {
-  --color-background: light-dark(var(--color-light), var(--color-dark));
+  --color-background: light-dark(var(--color-bg), var(--color-dark));
   --color-background-stripe: light-dark(
     color-mix(in srgb, var(--color-dark) 10%, transparent),
     color-mix(in srgb, var(--color-light) 10%, transparent)

@@ -2,7 +2,6 @@
  * Marp / Marpit Gaia theme (CSS, customized).
  *
  * @theme gaia1
- * @author Yuki Hattori
  *
  * @auto-scaling true
  * @size 16:9 1280px 720px
@@ -14,7 +13,7 @@
 /* Tunable tokens — edit these first */
 :root {
   --color-bg: #ffffff;
-  --color-light: #fff;
+  --color-light: #ffffff;
   --color-dark: #455a64;
   --color-primary: #0288d1;
   --color-secondary: #81d4fa;
@@ -94,7 +93,6 @@ code {
   display: inline-block;
   font-family: var(--font-mono);
   font-size: 0.8em;
-  letter-spacing: 0;
   margin: -0.1em 0.15em;
   padding: 0.1em 0.2em;
   vertical-align: baseline;
@@ -125,7 +123,6 @@ pre .line.highlighted {
 }
 
 svg[data-marp-mermaid] {
-  letter-spacing: 0;
   max-height: calc(580px - 1em);
 }
 
@@ -258,7 +255,6 @@ section {
   font-family: var(--font-body);
   height: 720px;
   line-height: 1.35;
-  letter-spacing: 1.25px;
   padding: 70px;
   width: 1280px;
   overflow-wrap: break-word;

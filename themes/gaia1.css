@@ -1,7 +1,5 @@
-
-
 /*!
- * Marp / Marpit Gaia1 theme.
+ * Marp / Marpit Gaia theme (CSS, customized).
  *
  * @theme gaia1
  *
@@ -10,4 +8,383 @@
  * @size 4:3 960px 720px
  */
 
-@import-theme 'gaia'
+@import 'https://fonts.bunny.net/css?family=Roboto+Mono:400,700&display=swap';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0 0;
+}
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  font-weight: inherit;
+}
+
+h1::part(auto-scaling),
+h2::part(auto-scaling),
+h3::part(auto-scaling),
+h4::part(auto-scaling),
+h5::part(auto-scaling),
+h6::part(auto-scaling) {
+  max-height: 580px; /* Slide height - padding * 2 */
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.9em;
+}
+
+p,
+blockquote {
+  margin: 1em 0 0;
+}
+
+ul > li,
+ol > li {
+  margin: 0.3em 0 0;
+}
+
+ul > li > p,
+ol > li > p {
+  margin: 0.6em 0 0;
+}
+
+code {
+  display: inline-block;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8em;
+  letter-spacing: 0;
+  margin: -0.1em 0.15em;
+  padding: 0.1em 0.2em;
+  vertical-align: baseline;
+}
+
+pre {
+  display: block;
+  margin: 1em 0 0;
+  overflow: visible;
+  contain: paint;
+}
+
+pre code {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 100%;
+  padding: 0.5em;
+  font-size: 0.7em;
+}
+
+pre::part(auto-scaling) {
+  max-height: calc(580px - 1em);
+}
+
+pre .line.highlighted {
+  border-image: conic-gradient(var(--marp-shiki-line-highlight) 0 0) fill
+    0/ /0 10000vw;
+}
+
+svg[data-marp-mermaid] {
+  letter-spacing: 0;
+  max-height: calc(580px - 1em);
+}
+
+svg[data-marp-mermaid] [data-shape='state-start'],
+svg[data-marp-mermaid] [data-shape='state-end'] {
+  --_text: var(--color-foreground);
+}
+
+svg[data-marp-mermaid][data-xychart-colors] {
+  --marp-mermaid-background: transparent;
+  --marp-mermaid-foreground: var(--color-foreground);
+}
+
+svg[data-marp-mermaid] .xychart-tip-text {
+  --bg: var(--color-background);
+}
+
+blockquote {
+  margin: 1em 0 0;
+  padding: 0 1em;
+  position: relative;
+}
+
+blockquote::after,
+blockquote::before {
+  content: '“';
+  display: block;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  position: absolute;
+}
+
+blockquote::before {
+  top: 0;
+  left: 0;
+}
+
+blockquote::after {
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+blockquote > *:first-child {
+  margin-top: 0;
+}
+
+mark {
+  background: transparent;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1em 0 0;
+}
+
+table th,
+table td {
+  padding: 0.2em 0.4em;
+  border-width: 1px;
+  border-style: solid;
+}
+
+header,
+footer,
+section::after {
+  box-sizing: border-box;
+  font-size: 66%;
+  height: 70px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 10px 25px;
+  position: absolute;
+}
+
+header {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+section {
+  --color-light: #ffffff;
+  --color-dark: #202020;
+  --color-primary: #0288d1;
+  --color-secondary: #81d4fa;
+
+  --color-background: light-dark(var(--color-light), var(--color-dark));
+  --color-background-stripe: light-dark(
+    color-mix(in srgb, var(--color-dark) 10%, transparent),
+    color-mix(in srgb, var(--color-light) 10%, transparent)
+  );
+  --color-foreground: light-dark(var(--color-dark), var(--color-light));
+  --color-dimmed: light-dark(
+    color-mix(in srgb, var(--color-dark) 80%, var(--color-light)),
+    color-mix(in srgb, var(--color-light) 80%, var(--color-dark))
+  );
+  --color-highlight: light-dark(var(--color-primary), var(--color-secondary));
+
+  /* Colors for Shiki highlighter */
+  --marp-shiki-foreground: var(--color-background);
+  --marp-shiki-background: var(--color-foreground);
+  --marp-shiki-line-highlight: var(--color-dimmed);
+  --marp-shiki-token-link: #e9c062;
+  --marp-shiki-token-string: light-dark(#daefa3, #65b042);
+  --marp-shiki-token-comment: #aeaeae;
+  --marp-shiki-token-constant: light-dark(#65a0ee, #3e87e3);
+  --marp-shiki-token-keyword: #e28964;
+  --marp-shiki-token-parameter: var(--marp-shiki-foreground);
+  --marp-shiki-token-function: light-dark(#89bdff, #65a0ee);
+  --marp-shiki-token-string-expression: light-dark(#daefa3, #65b042);
+  --marp-shiki-token-punctuation: var(--marp-shiki-foreground);
+  --marp-shiki-token-inserted: light-dark(#daefa3, #65b042);
+  --marp-shiki-token-deleted: #e28964;
+  --marp-shiki-token-changed: #e9c062;
+
+  color-scheme: light;
+  background-color: var(--color-background);
+  background-image: linear-gradient(
+    135deg,
+    var(--color-background),
+    color-mix(in srgb, var(--color-background) 98%, #888 2%) 50%,
+    var(--color-background) 50%,
+    color-mix(in srgb, var(--color-background) 95%, #fff 5%)
+  );
+  color: var(--color-foreground);
+  font-size: 35px;
+  font-family: Arial, sans-serif;
+  height: 720px;
+  line-height: 1.35;
+  letter-spacing: 1.25px;
+  padding: 70px;
+  width: 1280px;
+  overflow-wrap: break-word;
+}
+
+section::after {
+  right: 0;
+  bottom: 0;
+  font-size: 80%;
+}
+
+section a,
+section mark {
+  color: var(--color-highlight);
+}
+
+section code {
+  background-color: var(--color-dimmed);
+  color: var(--color-background);
+}
+
+section pre {
+  background-color: var(--marp-shiki-background);
+  color: var(--marp-shiki-foreground);
+}
+
+section pre > code {
+  background-color: transparent;
+}
+
+section h1 strong,
+section h2 strong,
+section h3 strong,
+section h4 strong,
+section h5 strong,
+section h6 strong {
+  color: var(--color-highlight);
+}
+
+section header,
+section footer,
+section section::after,
+section blockquote::before,
+section blockquote::after {
+  color: var(--color-dimmed);
+}
+
+section table th,
+section table td {
+  border-color: var(--color-foreground);
+}
+
+section table thead th {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+section table tbody > tr:nth-child(odd) td,
+section table tbody > tr:nth-child(odd) th {
+  background: var(--color-background-stripe, transparent);
+}
+
+section > *:first-child,
+section > header:first-child + * {
+  margin-top: 0;
+}
+
+section:where(.invert) {
+  color-scheme: dark;
+}
+
+section:where(.gaia) {
+  color-scheme: dark;
+
+  --color-background: var(--color-primary);
+  --color-background-stripe: color-mix(
+    in srgb,
+    var(--color-light) 10%,
+    transparent
+  );
+  --color-foreground: var(--color-light);
+  --color-dimmed: color-mix(
+    in srgb,
+    var(--color-light) 80%,
+    var(--color-primary)
+  );
+  --color-highlight: var(--color-secondary);
+  --marp-mermaid-muted: color-mix(
+    in srgb,
+    var(--color-light) 50%,
+    var(--color-primary)
+  );
+}
+
+section:where(.lead) {
+  place-content: safe center center;
+
+  /* Definitions for classic behavior: Users can adopt flex centering by tweaking style `section.lead { display: flex }` */
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+section:where(.lead) h1,
+section:where(.lead) h2,
+section:where(.lead) h3,
+section:where(.lead) h4,
+section:where(.lead) h5,
+section:where(.lead) h6 {
+  text-align: center;
+}
+
+section:where(.lead) p {
+  text-align: center;
+}
+
+section:where(.lead) svg[data-marp-mermaid] {
+  margin-inline: auto;
+}
+
+section:where(.lead) blockquote > h1,
+section:where(.lead) blockquote > h2,
+section:where(.lead) blockquote > h3,
+section:where(.lead) blockquote > h4,
+section:where(.lead) blockquote > h5,
+section:where(.lead) blockquote > h6,
+section:where(.lead) blockquote > p {
+  text-align: left;
+}
+
+section:where(.lead) ul > li > p,
+section:where(.lead) ol > li > p {
+  text-align: left;
+}
+
+section:where(.lead) table {
+  margin-left: auto;
+  margin-right: auto;
+}

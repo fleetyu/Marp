@@ -10,6 +10,18 @@
 
 @import 'https://fonts.bunny.net/css?family=Roboto+Mono:400,700&display=swap';
 
+/* Tunable tokens — edit these first */
+:root {
+  --color-light: #ffffff;
+  --color-dark: #2f2f2f;
+  --color-primary: #0288d1;
+  --color-secondary: #81d4fa;
+
+  --font-body: Arial, sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  --font-size: 35px;
+}
+
 h1,
 h2,
 h3,
@@ -78,7 +90,7 @@ ol > li > p {
 
 code {
   display: inline-block;
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.8em;
   letter-spacing: 0;
   margin: -0.1em 0.15em;
@@ -201,11 +213,6 @@ footer {
 }
 
 section {
-  --color-light: #ffffff;
-  --color-dark: #202020;
-  --color-primary: #0288d1;
-  --color-secondary: #81d4fa;
-
   --color-background: light-dark(var(--color-light), var(--color-dark));
   --color-background-stripe: light-dark(
     color-mix(in srgb, var(--color-dark) 10%, transparent),
@@ -245,8 +252,8 @@ section {
     color-mix(in srgb, var(--color-background) 95%, #fff 5%)
   );
   color: var(--color-foreground);
-  font-size: 35px;
-  font-family: Arial, sans-serif;
+  font-size: var(--font-size);
+  font-family: var(--font-body);
   height: 720px;
   line-height: 1.35;
   letter-spacing: 1.25px;
